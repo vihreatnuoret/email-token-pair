@@ -1,0 +1,17 @@
+{
+  "name": "email-token-pair",
+  "version": "1.0.0",
+  "description": "App to create token and email pairs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Roope Merikukka",
+  "license": "ISC",
+  "dependencies": {
+    "args": "^5.0.1",
+    "chalk": "^2.4.2",
+    "csv-parser": "^2.2.0",
+    "uuid": "^3.3.2"
+  }
+}
