@@ -1,5 +1,4 @@
 const args = require('args')
-const chalk = require('chalk')
 const fs = require('fs')
 const csv = require('csv-parser')
 const uuid = require('uuid/v4')
@@ -10,8 +9,6 @@ args.option('input', 'Input filename', 'example_input.csv')
 
 const flags = args.parse(process.argv)
 
-console.log(flags)
-
 const inputFile = flags.input
 const tokensFile = flags.tokens
 const outputFile = flags.output
@@ -21,7 +18,7 @@ fs.writeFileSync(outputFile, 'email,token\n')
 fs.writeFileSync(tokensFile, 'token\n')
 
 fs.createReadStream(inputFile)
-  .pipe(csv(['email']))
+  .pipe(csv())
   .on('data', data => {
     const token = uuid()
     fs.appendFileSync(tokensFile, `${token}\n`)
