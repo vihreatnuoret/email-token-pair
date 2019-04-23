@@ -2,10 +2,28 @@
 
 Small script to generate unique tokens to pair an email address. Script takes an CSV file containing email addresses as an input and creates tweo files as output: one that contains email and token pairs and second which only contains the used tokens.
 
+## Installation
+
+```bash
+# clone the project
+git clone git@github.com:vihreatnuoret/email-token-pair.git
+# move to the project directory
+cd email-token-pair
+# install dependencies
+npm install
+
+```
+
 ## Usage
 
 ```bash
+
 node index.js --input emails.csv --output list.csv --tokens tokens.csv
+
+# or
+
+npm start --input emails.csv --output list.csv --tokens tokens.csv
+
 ```
 
 ### Options
